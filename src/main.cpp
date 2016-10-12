@@ -190,7 +190,8 @@ int pov(lua_State* state)
   #ifdef _WIN32
   LUA->PushNumber((float)(joy_state[joy].rgdwPOV[pov]));
   #else
-  LUA->PushNumber((float)SDL_JoystickGetHat(joystick[joy], pov));
+  const int out[13] = { -1, 0, 9000, 4500, 18000, -1, 13500, -1, 27000, 31500, -1, -1, 22500 };
+  LUA->PushNumber((float)out[SDL_JoystickGetHat(joystick[joy], pov)]);
   #endif
   return 1;
 }
