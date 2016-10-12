@@ -6,7 +6,7 @@ A joystick module for GMod, originally by NightEagle (http://facepunch.com/membe
 Original Facepunch thread: http://www.facepunch.com/showthread.php?t=403669
 
 This version adds support for non-Windows platforms via SDL. It should compile with:
-```
+```shell
 g++ -Wall -fPIC -shared -lSDL -lpthread -o "../lua/bin/gmcl_joystick.so" "main.cpp"
 ```
 
