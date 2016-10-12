@@ -167,7 +167,7 @@ int axis(lua_State* state)
   out = SDL_JoystickGetAxis(joystick[joy], axi);
   #endif
 
-  LUA->PushNumber((float)out);
+  LUA->PushNumber((float)(out + 32768));
   return 1;
 }
 
