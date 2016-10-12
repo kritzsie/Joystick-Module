@@ -7,7 +7,7 @@ Original Facepunch thread: http://www.facepunch.com/showthread.php?t=403669
 
 This version adds support for non-Windows platforms via SDL. It should compile with:
 ```shell
-g++ -Wall -fPIC -shared -lSDL -lpthread -o "../lua/bin/gmcl_joystick.so" "main.cpp"
+g++ -Wall -fPIC -shared -lSDL -lpthread -m32 -o "../lua/bin/gmcl_joystick_linux.dll" "main.cpp"
 ```
 
 Installation
